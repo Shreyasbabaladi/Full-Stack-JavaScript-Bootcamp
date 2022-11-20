@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  </head>
+  <style>
+    body {
+      background: #3494e6;
+      background: -webkit-linear-gradient(to right, #ec6ead, #3494e6);
+      background: linear-gradient(to right, #ec6ead, #3494e6);
+      color: #fff;
+      height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column;
+    }
+    .wrapper{
+      background-color: rgba(255, 255, 255, .15);  
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+      max-width: 500px;
+      padding: 20px 30px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+     h1{
+      font-size: 41px;
+    }
+    .select-level, input, button{
+      border: none;
+      margin: 10px 5px;
+    }
+    .select-level{
+      padding: 5px 2px; 
+      border-radius: 5px;
+    }
+    input{
+      border-radius: 4px;
+      padding: 10px 20px;
+    }
+    input:focus-visible{
+      outline: none;
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+    }
+    button{
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .randomNumber{
+      color: #001253;
+      display: none;
+    }
+    .clue-btn{
+      display: none;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <!-- this will contain our game body -->
+    <h1>Welcome to the Number Guessing Game</h1>
+    <div class="wrapper">
+      <!-- display our message -->
+      <p class="message">Message</p>
+      <p>Total Attempt : <span class="attempt">0</span></p>
+      <label for="levels">Select level</label>
+      <select name="levels" class="select-level" onchange="getLevel()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <form onsubmit="playGame(event)">
+        <input class="userInput" type="number" required />
+        <button type="submit">Check Ans</button>
+      </form>
+      <button class="clue-btn" onclick="showNum()">Show Number</button>
+      <h1 class='randomNumber'>3</h1>
+    </div>
+  </body>
+
+  <script>
+    let randomNumber = (levels) => {
+      switch (levels) {
+        case "medium":
+          return Math.floor(Math.random() * 31);
+        case "hard":
+          return Math.floor(Math.random() * 101);
+        default:
+          return Math.floor(Math.random() * 11);
+      }
+    };
+
+    let computerGuess = randomNumber();
+
+    let getLevel = () => {
+      let level = document.querySelector(".select-level").value;
+      computerGuess = randomNumber(level);
+    };
+
+    let message = document.querySelector(".message");
+    let userInput = document.querySelector(".userInput");
+    let attempt = document.querySelector(".attempt");
+    let cluebBtn = document.querySelector(".clue-btn");
+    let secretNumber = document.querySelector(".randomNumber");
+
+    const playGame = (event) => {
+      event.preventDefault();
+      if (computerGuess == userInput.value) {
+        message.innerHTML = "You won the Game";
+        celebrate();
+        setTimeout(() => {
+          // window.location.reload();
+          computerGuess = randomNumber();
+          message.innerHTML = "Message";
+          cluebBtn.style.display='none';
+          secretNumber.style.display='none';
+          userInput.value = "";
+          attempt.innerHTML = "0";
+        }, 1500);
+      } else if (computerGuess > userInput.value) {
+        message.innerHTML = "Guess a greater number";
+      } else if (computerGuess < userInput.value) {
+        message.innerHTML = "Guess a smaller number";
+      }
+
+      attempt.innerHTML = Number(attempt.innerHTML) + 1;
+      if(attempt.innerHTML >= 5){
+        cluebBtn.style.display = 'block';
+      }
+    };
+
+    const showNum = () => {
+      secretNumber.innerHTML=computerGuess;
+      secretNumber.style.display='block';
+    }
+
+    const celebrate = () => {
+      var defaults = {
+        spread: 360,
+        ticks: 50,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["star"],
+        colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+      };
+
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 40,
+          scalar: 1.2,
+          shapes: ["star"],
+        });
+
+        confetti({
+          ...defaults,
+          particleCount: 10,
+          scalar: 0.75,
+          shapes: ["circle"],
+        });
+      }
+
+      setTimeout(shoot, 0);
+      setTimeout(shoot, 100);
+      setTimeout(shoot, 200);
+    };
+  </script>
+</html>
+
