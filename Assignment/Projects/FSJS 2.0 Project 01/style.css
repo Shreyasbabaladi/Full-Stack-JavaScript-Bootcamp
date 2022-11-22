@@ -1,130 +1,143 @@
-/* You can not modify anything in the HTML */
-/* You can only modify the CSS file */
-
-*{
-    margin: 0; padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-
-    /* border: .5px solid black; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
 }
 
-:root{
-    --purple-dark: 	#9F2B68;
-    --purpla-light: #d84493;
-    --black: #000;
+:root {
+  --purple-dark: #9f2b68;
+  --purpla-light: #d84493;
+  --black: #000;
 }
 
-body{
-    width: 100%;
-    height:fit-content;
+body {
+  width: 100%;
+  height: fit-content;
 }
 
-.container{
- height: 100vh;
- width: 100%;
- max-width: 1500px; 
- margin: auto;
+.container {
+  height: auto;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
 }
 
 /************** nav bar ********************/
-section[aria-label="navbar"]{
-    /* position: absolute;
-    top: 0;
-    width: 100%; */
-    padding: 40px 70px;
+section[aria-label="navbar"] {
+  padding: 40px 70px;
 }
-.navbar-container{
-    display: flex;
-    gap: 10px;
+.navbar-container {
+  display: flex;
+  gap: 10px;
 }
 
-.brand-logo{
-    flex-grow: 0;
-    margin: auto;
+.brand-logo {
+  flex-grow: 0;
+  margin: auto;
 }
-.brand-logo img{
-    width: 100px;
+.brand-logo img {
+  width: 100px;
 }
 
-
-.grow-list{
-    flex-grow: 3;
+.grow-list {
+  flex-grow: 3;
+  margin: auto;
 }
-.grow-list .list{
-    display: flex;
-    margin-left: 10px;
-    list-style-type: none;
-    gap: 20px;
+.grow-list .list {
+  display: flex;
+  margin-left: 7%;
+  list-style-type: none;
+  gap: 4%;
 }
-.list-item{
-    padding: 20px 30px;
-    font-size: 16px;
-    color: var(--black);
-    font-family: Poppins, sans-serif;
-    font-weight: 600;
+.list-item {
+  /* padding: 20px 30px; */
+  font-size: 16px;
+  color: var(--black);
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  display: block;
 }
 .list .list-item:not(:first-child) {
-    color: rgb(128, 128, 128); 
+  color: rgb(128, 128, 128);
 }
 
-.list .list-item:hover{
-    color: var(--black);
+.list .list-item:hover {
+  color: var(--black);
 }
 
-
-
-.button-group{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.button-group {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav-button{
-    background-color: var(--purpla-light);
-    padding: 15px 25px;
-    border-radius: 10px;
-    color: #fff;
-    border: none;
+.nav-button {
+  background-color: var(--purpla-light);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #fff;
+  border: none;
 }
-
-
 
 /************** Banner ********************/
-section[aria-label="banner"]{
-    /* padding-top: 112px; */
-}
-.banner-container{
-    display: flex;
-    width: 100%;
+.banner-container {
+  display: flex;
+  width: 100%;
 }
 
 /* left-side */
-.heading-text{
-    padding: 50px 30px 10px 40px;
-    font-size: 62px;
-    line-height: 1.2;
-    font-family: Poppins, sans-serif;
+.heading-text {
+  padding: 50px 30px 10px 40px;
+  font-size: clamp(40px, 4vw, 62px);
+  line-height: 1.2;
+  font-family: Poppins, sans-serif;
 }
-.description{
-    padding: 10px 30px 10px 40px;
+.description {
+  padding: 10px 50px 10px 40px;
+  color: rgb(128, 128, 128);
 }
-.btn{
-    padding: 20px 35px;
-    margin-left: 40px;
-    margin-top: 30px;
-    font-size: 18px;
+.btn {
+  padding: 20px 35px;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-size: 18px;
 }
-.banner-container div:first-child{
-    width: 35%;
-    padding: 10px 20px;
+.banner-container div:first-child {
+  width: 35%;
+  padding: 10px 20px;
 }
-.banner-container div:last-child{
-    width: 65%;
-    display: flex;
-    justify-content: end;
+
+/* right-side */
+.banner-container div:last-child {
+  width: 65%;
+  display: flex;
+  justify-content: end;
 }
 img[alt="illustration"] {
-    width: 90%;
-    height: auto;
- }
+  width: 90%;
+  aspect-ratio: 879 / 684;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* table-mobile */
+
+@media screen and (max-width: 800px) {
+  .banner-container {
+    flex-direction: column;
+  }
+  .banner-container div:first-child {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .banner-container div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .grow-list .list {
+    display: none;
+  }
+}
