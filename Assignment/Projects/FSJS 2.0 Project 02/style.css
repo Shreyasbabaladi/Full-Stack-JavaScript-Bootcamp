@@ -1,2 +1,133 @@
 /* You can not modify anything in the HTML */
 /* You can only modify the CSS file */
+
+:root{
+    --pink: rgb(250, 140, 182);
+    --white: #fff;
+    --black:#0d0d0d;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 100%;
+    /* max-width: 1500px; */
+    height: 100vh;
+    margin: auto;
+}
+
+/* navbar */
+section[aria-label="navbar"]{
+    width: 100%;
+    position:absolute;
+    left: 0;
+    background-color: var(--black);
+}
+
+.navbar{
+    display: flex;
+    height: 72px;
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.navbar div:first-child {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.navbar div:first-child img{
+    width: 90px;
+    margin: auto;
+}
+.line{
+    border: 1px solid white ;
+    height: 50px;
+    margin: auto;
+}
+.grow-list{
+    width: 65%;
+}
+.list {
+    display: flex;
+    gap: 30px;
+}
+
+.list-item{
+    list-style-type: none;
+    color: var(--white);
+    height: 74px;
+    text-align: center;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar div:last-child {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.button-small{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+
+
+/* banner */
+section[aria-label="hero"]{
+    padding-top: 112px;
+    height: 95vh;
+    background-image: url(./assets/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    text-align: center;
+    width: 50%;
+}
+.hero-heading{
+color: var(--white);
+font-size: clamp(32px, 4vw, 62px );
+}
+.hero-description{
+color: var(--white);
+font-size: clamp(12px, 4vw, 22px);
+font-weight: 700;
+}
+.button-large{
+margin-top: 30px;
+font-size: clamp(10px, 2vw, 22px);
+font-weight: 700;
+color: var(--white);
+background-color: var(--pink);
+padding: 15px 10px;
+border: none;
+border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .list, .line{
+        display: none;
+    }
+}

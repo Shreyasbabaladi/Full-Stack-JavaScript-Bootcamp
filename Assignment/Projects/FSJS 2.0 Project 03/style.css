@@ -1,2 +1,229 @@
 /* You can not modify anything from the HTML file */
 /* You can only modify the CSS file */
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: 0;
+    font-family: "Orbitron", serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1500px;
+    margin: auto;
+}
+
+section[aria-label="navbar"]{
+    width: 100%;
+    position: absolute;
+    height: 72px;
+    left: 0;
+    top: 0;
+
+}
+.navbar-container{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1500px;
+    height: 72px;
+    margin: auto;
+}
+
+.list{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    font-weight: 700;
+}
+.list-item{
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.list-item:hover{
+    font-weight: 1000;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+.navbar-container div:nth-child(1){
+    width: 10%;
+}
+.navbar-container div:nth-child(1) img {
+    width: 90%;
+    max-width: 120px;
+    min-width: 80px;
+}
+.navbar-container div:nth-child(2){
+    width: 75%;
+}
+.button-group{
+    width: 15%;
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group div:last-child{
+    width: auto;
+}
+
+.search-icon svg{
+    width: 22px;
+    height: 25px;
+}
+.nav-button{
+    padding: 7px 30px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    border: 3px solid #0d0d0d;
+    margin: 10px;
+}
+
+
+/* banner */
+section[aria-label="banner"]{
+    width: 100%;
+    height: 90vh;
+    padding-top:112px;
+}
+.hero-container{
+    width: 90%;
+    margin: auto;
+    max-width: 1500px;
+    display: flex;
+    position: relative;
+}
+
+.square, .star, .globe{
+    position: absolute;
+} 
+
+.hero-container div:nth-child(5){
+    width: 40%;
+}
+.hero-container div:nth-child(5) img{
+    width: 80%;
+    z-index: 2;
+}
+.hero-container-right{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.square{
+    z-index: -1;
+    top: clamp(10%, 14vw, 33%);
+    left: clamp(3%, 14vw, 7%);
+}
+.square img{
+    width: clamp(60%, 30vw, 100%);
+}
+.globe {
+    left: 55%;
+}
+.globe img{
+    width: 60px;
+}
+.hero-container .star:nth-child(2){
+    right: 10%;
+}
+.hero-container .star:nth-child(2) img{
+    width: 70px;
+}
+.hero-container .star:nth-child(3){
+    bottom: 0;
+    left: 50%;
+}
+.hero-container .star:nth-child(3) img{
+width: 50px;}
+.hero-heading{
+    font-size: 3rem;
+    margin: 15px;
+}
+.hero-description{
+    margin: 15px;
+}
+.button-email,.button-join, .contact-heading{
+    margin:15px 5px;
+}
+.hero-container-right{
+    margin-top: 7vw;
+    text-align: center;
+}
+.icons span{
+    margin: 5px 10px
+}
+.hero-container-right div:nth-child(3){
+    margin-top: 20px;
+}
+.button-email{
+    padding: 4px 15px;
+    font-size: 14px;
+    border: 1px solid #0d0d0d;
+    border-radius: 8px;
+    background-color: inherit;
+}
+.button-join{
+padding: 2px;
+font-size: 16px;
+border: 1px solid #0d0d0d;
+border-radius: 8px;
+color: #fff;
+background-color: #0d0d0d;
+}
+
+.contact-heading{
+    margin-top: 50px;
+    color: rgb(129, 129, 129);
+}
+.icons span img{
+ width: 30px;
+ aspect-ratio: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .list-item{
+        display: none;
+    }
+    .nav-button{
+        display: none;
+    }
+    .hero-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-container-right {
+        width: 90%;
+    }
+    .square{
+        top: 7vw;
+        left: 31%;
+    }
+    .globe{
+        left: 80%;
+    }
+    .globe img{
+        width: 40px;
+    }
+
+    .hero-container .star:nth-child(2) {
+        right: 85%;
+        top: 28%;
+    }
+    .hero-container .star:nth-child(2) img{
+        width:40px ;
+    }
+    .hero-container .star:nth-child(3){
+        display: none;
+    }
+}
