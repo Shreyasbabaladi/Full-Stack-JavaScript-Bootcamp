@@ -43,7 +43,7 @@
   <body>
     <nav class="fixed w-full top-0 left-0 bg-lightBlack h-14 text-white">
       <div
-        class="container flex justify-between items-center w-11/12 max-w-6xl mx-auto h-14"
+        class="container flex justify-between itgms-center w-11/12 max-w-6xl mx-auto h-14"
       >
         <!-- log brand -->
         <div class="w-auto xl:w-1/6">
@@ -109,7 +109,7 @@
           </ul>
         </div>
         <!-- sider button -->
-        <div class="flex">
+        <div class=" hidden lg:flex ">
           <form>
             <div class="relative w-44">
               <input
@@ -139,19 +139,22 @@
       </div>
     </nav>
 
+
+    <!-- Notification ribbon -->
     <div class="w-full mt-14 bg-[#25252b]">
       <div class="container w-11/12 max-w-6xl mx-auto">
-        <p class="text-white text-center p-3 h-14 text-base">
+        <p class="text-white text-center p-3 h-auto text-base">
           <a href="http://"> <span class="text-vsBlue">Version 1.73</span></a>
           is now available! Read about the new features and fixes from October.
         </p>
       </div>
     </div>
 
+    <!-- Hero Banner -->
     <section class="bg-lightBlack text-white font-SegoeUI">
-      <div class="container flex h-[80vh] mx-auto w-11/12 max-w-6xl">
+      <div class="container flex items-center flex-col lg:flex-row  h-augo mx-auto w-11/12 max-w-6xl">
         <!-- left sider -->
-        <div class="w-1/3 flex flex-col items-center">
+        <div class="w-4/5 lg:w-1/3 flex flex-col items-center ">
           <h1 class="text-5xl px-2 py-3 text-center mt-10">
             Code editing.<br />
             <strong>Redefined.</strong>
@@ -196,16 +199,17 @@
         <!-- right sider  -->
         <div class="w-8/12">
           <div
-            class="bg-hero-img h-[74vh] bg-contain bg-center bg-no-repeat"
+            class="bg-hero-img h-[60vw] lg:h-[74vh] bg-contain bg-center bg-no-repeat"
           ></div>
         </div>
       </div>
     </section>
 
+    <!-- Icons plan  -->
     <section class="">
-      <div class="container mx-auto w-11/12 max-w-6xl">
-        <div class="flex">
-          <div class="w-1/4">
+      <div class="containgr mx-auto w-11/12 max-w-6xl">
+        <div class="flex flex-wrap">
+          <div class=" w-1/2 lg:w-1/4">
             <a
               class="py-3 mx-2 text-center block text-lg text-[#444] hover:text-black hover:bg-[#e3e3e3]"
               href=""
@@ -216,7 +220,7 @@
               IntelliSense
             </a>
           </div>
-          <div class="w-1/4">
+          <div class=" w-1/2 lg:w-1/4">
             <a
               class="py-3 mx-2 text-center block text-lg text-[#444] hover:text-black hover:bg-[#e3e3e3]"
               href=""
@@ -227,7 +231,7 @@
               Run and Debug
             </a>
           </div>
-          <div class="w-1/4">
+          <div class=" w-1/2 lg:w-1/4">
             <a
               class="py-3 mx-2 text-center block text-lg text-[#444] hover:text-black hover:bg-[#e3e3e3]"
               href=""
@@ -238,7 +242,7 @@
               Built-in Git
             </a>
           </div>
-          <div class="w-1/4">
+          <div class=" w-1/2 lg:w-1/4">
             <a
               class="py-3 mx-2 text-center block text-lg text-[#444] hover:text-black hover:bg-[#e3e3e3]"
               href=""
@@ -253,20 +257,47 @@
       </div>
     </section>
 
+    <section>
+      <div class="container max-w-6xl w-11/12 mx-auto">
+
+        <!-- card wapper -->
+        <div>
+           <div class="">
+          
+          <!-- cards section  -->
+          <!-- card one  -->
+          <div>
+            <img src="https://twitter.com/Una/status/1127957563876753409" alt="">
+            <div>
+              <div>
+                <h1>Una Kravets</h1>
+                <span>Una</span>
+              </div>
+              <p>VS @code does so many things right. I’m constantly impressed by the UX, and customizing workspace / user preferences is no exception. 🙌🏼💯 It just keeps getting better ❤️</p>
+            </div>
+          </div>
+
+        </div>
+        </div>
+       
+      </div>
+    </section>
+
     <!-- Swimlanes -->
-    <section class="py-4 px-2">
+    <!-- Swimlanes - 01 -->
+    <section class="py-10 px-2">
       <div
-        class="container flex w-11/12 max-w-6xl mx-auto h-80 justify-between items-center"
+        class="container flex flex-col lg:flex-row w-11/12 max-w-6xl mx-auto h-auto justify-between items-center"
       >
-        <div class="w-1/3">
+        <div class="w-[85%] md:w-4/5 lg:w-1/3">
           <img
             src="./Images/home-intellisense.svg"
             alt="IntelliSense"
             srcset=""
-            class="w-full h-auto"
+            class="w-full h-auto m-auto"
           />
         </div>
-        <div class="w-7/12">
+        <div class="w-11/12 md:w-4/5 lg:w-7/12">
           <h2 class="text-3xl px-2 py-3">Meet IntelliSense.</h2>
           <p class="text-lg mt-2 px-2 py-3 leading-8">
             Go beyond syntax highlighting and autocomplete with IntelliSense,
@@ -277,11 +308,13 @@
       </div>
     </section>
 
-    <section class="py-4 px-2">
+    <!-- Swimlanes - 02 -->
+
+    <section class="py-10 px-2">
       <div
-        class="container flex w-11/12 max-w-6xl mx-auto h-80 justify-between items-center"
+        class="container flex flex-col-reverse lg:flex-row w-11/12 max-w-6xl mx-auto h-auto justify-between items-center"
       >
-        <div class="w-1/3 order-2">
+        <div class="w-[85%] md:w-4/5 lg:w-1/3 order-2">
           <img
             src="./Images/home-debug.svg"
             alt="IntelliSense"
@@ -289,7 +322,7 @@
             class="w-full h-auto"
           />
         </div>
-        <div class="w-7/12 order-1">
+        <div class="w-11/12 md:w-4/5 lg:w-7/12 order-1">
           <h2 class="text-3xl px-2 py-3">
             Print statement debugging is a thing of the past.
           </h2>
@@ -302,11 +335,12 @@
       </div>
     </section>
 
-    <section class="py-4 px-2">
+    <!-- Swimlanes - 03 -->
+    <section class="py-10 px-2">
       <div
-        class="container flex w-11/12 max-w-6xl mx-auto h-80 justify-between items-center"
+        class="container flex flex-col lg:flex-row w-11/12 max-w-6xl mx-auto h-auto justify-between items-center"
       >
-        <div class="w-1/3">
+        <div class="w-[85%] md:w-4/5 lg:w-1/3">
           <img
             src="./Images/home-git.svg"
             alt="IntelliSense"
@@ -314,7 +348,7 @@
             class="w-full h-auto"
           />
         </div>
-        <div class="w-7/12">
+        <div class="w-11/12 md:w-4/5 lg:w-7/12">
           <h2 class="text-3xl px-2 py-3">Git commands built-in.</h2>
           <p class="text-lg mt-2 px-2 py-3 leading-8">
             Working with Git and other SCM providers has never been easier.
@@ -325,11 +359,12 @@
       </div>
     </section>
 
-    <section class="py-4 px-2">
+    <!-- Swimlanes - 04 -->
+    <section class="py-10 px-2">
       <div
-        class="container flex w-11/12 max-w-6xl mx-auto h-80 justify-between items-center"
+        class="container flex flex-col-reverse lg:flex-row w-11/12 max-w-6xl mx-auto h-auto justify-between items-center"
       >
-        <div class="w-1/3 order-2">
+        <div class="w-[85%] md:w-4/5 lg:w-1/3 order-2">
           <img
             src="./Images/Hundreds-of-Extensions.png"
             alt="IntelliSense"
@@ -337,7 +372,7 @@
             class="w-full h-auto"
           />
         </div>
-        <div class="w-7/12 order-1">
+        <div class="w-11/12 md:w-4/5 lg:w-7/12 order-1">
           <h2 class="text-3xl px-2 py-3">Extensible and customizable.</h2>
           <p class="text-lg mt-2 px-2 py-3 leading-8">
             Want even more features? Install extensions to add new languages,
@@ -349,11 +384,12 @@
       </div>
     </section>
 
-    <section class="py-4 px-2">
+    <!-- Swimlanes - 05 -->
+    <section class="py-10 px-2">
       <div
-        class="container flex w-11/12 max-w-6xl mx-auto h-80 justify-between items-center"
+        class="container flex flex-col lg:flex-row w-11/12 max-w-6xl mx-auto h-auto justify-between items-center"
       >
-        <div class="w-1/3">
+        <div class="w-[85%] md:w-4/5 lg:w-1/3">
           <img
             src="./Images/home-azure.svg"
             alt="IntelliSense"
@@ -361,7 +397,7 @@
             class="w-full h-auto"
           />
         </div>
-        <div class="w-7/12">
+        <div class="w-11/12 md:w-4/5 lg:w-7/12">
           <h2 class="text-3xl px-2 py-3">Deploy with confidence and ease</h2>
           <p class="text-lg mt-2 px-2 py-3 leading-8">
             With Microsoft Azure you can deploy and host your React, Angular,
@@ -378,8 +414,8 @@
         <div class="w-full">
           <h2 class="text-2xl px-3 py-4 text-center">VS Code for</h2>
         </div>
-        <div class="grid grid-rows-2 grid-cols-6 gap-3 w-3/4 mx-auto">
-          <div class="flex items-center">
+        <div class="grid grid-rows-6 grid-cols-2 md:grid-flow-row-3 md:grid-flow-col-4 lg:grid-rows-2 lg:grid-cols-6 gap-5 w-3/4 mx-auto">
+          <div class="flex items-center ">
             <img
               src="./Images/langIcons/javascript.svg"
               alt="js"
@@ -387,15 +423,15 @@
             />
             <p>JavaScript</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/python.svg" alt="js" class="w-8 h-8" />
             <p>Python</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/java.svg" alt="js" class="w-8 h-8" />
             <p>Java</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img
               src="./Images/langIcons/markdown.svg"
               alt="js"
@@ -403,7 +439,7 @@
             />
             <p>Markdown</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img
               src="./Images/langIcons/typescript.svg"
               alt="js"
@@ -411,15 +447,15 @@
             />
             <p>TypeScript</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/cpp.svg" alt="js" class="w-8 h-8" />
             <p>C/C++</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/json.svg" alt="js" class="w-8 h-8" />
             <p>JSON</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img
               src="./Images/langIcons/powershell.svg"
               alt="js"
@@ -427,19 +463,19 @@
             />
             <p>Powershell</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/html.svg" alt="js" class="w-8 h-8" />
             <p>HTML/CSS</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/csharp.svg" alt="js" class="w-8 h-8" />
             <p>C#</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/php.svg" alt="js" class="w-8 h-8" />
             <p>PHP</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center ">
             <img src="./Images/langIcons/yaml.svg" alt="js" class="w-8 h-8" />
             <p>YAML</p>
           </div>
@@ -464,15 +500,15 @@
 
     <section class=" py-8">
       <div class="container w-3/4 max-w-6xl mx-auto">
-        <div class="flex justify-center">
+        <div class="flex justify-center flex-wrap">
           <!-- image-section -->
           <!-- download for windows  -->
-          <div class="w-1/3">
+          <div class="w-[85%] md:w-4/5 lg:w-1/3">
             <div class="lg:h-32">
               <img
                 src="./Images/windows-logo.png"
                 alt="windows-logo"
-                class="w-1/4 mx-auto"
+                class=" w-1/2 lg:w-1/4 mx-auto"
               />
             </div>
 
@@ -509,12 +545,12 @@
 
             <!-- download-linex  -->
           </div>
-          <div class="w-1/3">
+          <div class="w-[85%] md:w-4/5 lg:w-1/3">
             <div class="lg:h-32">
               <img
                 src="./Images/linux-logo.png"
                 alt="windows-logo"
-                class="w-1/4 mx-auto"
+                class=" w-1/2 lg:w-1/4 mx-auto"
               />
             </div>
 
@@ -554,12 +590,12 @@
             </div>
 
           </div>
-          <div class="w-1/3">
+          <div class="w-[85%] md:w-4/5 lg:w-1/3">
             <div class="lg:h-32">
               <img
                 src="./Images/apple-logo.svg"
                 alt="windows-logo"
-                class="w-1/4 mx-auto"
+                class=" w-1/2 lg:w-1/4 mx-auto"
               />
             </div>
 
@@ -632,7 +668,7 @@
   <!--  Footer  -->
   <footer class="bg-zinc-800 flex flex-col justify-center items-center z-10">
       <section class="flex flex-col gap-3 lg:gap-0 items-center justify-around lg:flex-row w-full lg:w-3/4 py-7">
-          <div class="flex items-center justify-center gap-8 text-sm basis-1/2">
+          <div class="flex items-center gap-8 text-sm basis-1/2">
               <p class="text-white font-normal">Hey Everyone</p>
               <p class="text-white hover:text-blue-500 font-semibold hover:underline cursor-pointer"><a
                       href="https://www.linkedin.com/in/shreyasbabaladi/">Follow Me!</a></p>
