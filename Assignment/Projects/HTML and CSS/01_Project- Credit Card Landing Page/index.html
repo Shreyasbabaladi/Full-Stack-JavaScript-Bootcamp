@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+    <title>Credit card</title>
+    <script>
+      tailwind.config = {
+        content: [],
+        theme: {
+          extend: {
+            colors: {
+              black: {
+                dark: "#151515",
+                light: "#292929",
+              },
+              pink: "#f637ec",
+            },
+            backgroundImage:{
+              "btn-bg": "url(Assets/Icons/btn-pink-bg.svg)",
+              "hero-img": "url(Assets/Photos/frontCards.png)",
+              "hero-img2": "url(Assets/Photos/backCards.png)"
+            }
+          },
+        },
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body>
+    <div class="w-full  bg-black-dark">
+      <!-- navigation bar -->
+      <nav class="border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div
+          class="container flex flex-wrap items-center justify-between mx-auto max-w-7xl"
+        >
+          <a href="#" class="flex items-center">
+            <img
+              src="./Assets/Icons/Logo.svg"
+              class="h-6 mr-3 sm:h-9"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div class="flex md:order-2">
+            <button class="p-[8px_3px_8px_25px] text-white  bg-btn-bg bg-no-repeat bg-[left_center] flex items-center">
+              Content US
+            </button>
+            <button
+              data-collapse-toggle="navbar-cta"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-cta"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                aria-hidden="true"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-cta"
+          >
+            <ul
+              class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Feature</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 pl-3 pr-4 text-gray-50 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <main class="relative">
+        
+        <div class="container max-w-7xl mx-auto text-white  bg-hero-img bg-no-repeat bg-[135%_center] bg-contain py-6" >
+          <div class="bg-hero-img2 bg-no-repeat bg-[right_top] bg-contain z-10">
+          
+          <div class="mt-7 w-full md:w-9/12">
+
+            <!-- hero headline -->
+            <h1 class="md:text-[62px] lg:text-[72px] px-2 py-5">Simplify All Transactions in <span class="text-pink">One Card</span></h1>
+            <!-- hero param  -->
+            <p class="px-2 py-5 w-2/4">
+              Hurry up and join now, with this you can manage your daily
+              finances easily and safely.
+            </p>
+            <!-- hero btn  -->
+            <div class="mx-2 my-5 ">
+              <button class="p-[8px_3px_8px_25px] font-bold bg-btn-bg bg-no-repeat bg-[left_center] flex items-center">
+                GET STARTED
+                <span>
+                  <img  class="mx-2" src="./Assets/Icons/RightArrow.svg" alt="RightArrow"
+                /></span>
+              </button>
+            </div>
+          </div>
+        
+          <div class="flex items-center my-5">
+
+            <div class="flex items-center ">
+              <div>
+                <p class="text-[42px] px-2">42K<span class="text-pink">+</span></p>
+              </div>
+              <div class="mx-2">
+                <p>Happy <br />Active User</p>
+              </div>
+            </div>
+            <div class=" bottom-2 h-8 border-x-2 mx-2"></div>
+
+            <div class="flex items-center">
+              <div>
+                <p class="text-[42px] px-2">12K<span class="text-pink">+</span></p>
+              </div>
+              <div class="mx-2">
+                <p>Years <br />Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </main>
+
+
+
+    </div>
+  </body>
+</html>
